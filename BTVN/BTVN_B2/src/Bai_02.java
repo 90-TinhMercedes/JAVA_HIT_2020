@@ -2,6 +2,7 @@
 - Tìm min và max trong mảng
 - Sắp xếp mảng theo thứ tự tăng dần*/
 
+import java.awt.*;
 import java.util.Scanner;
 
 public class Bai_02 {

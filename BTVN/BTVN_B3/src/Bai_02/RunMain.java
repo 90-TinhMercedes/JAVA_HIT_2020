@@ -9,6 +9,5 @@ public class RunMain {
             meoDucBo.Bark();
             meoDucBo.ShowMP();
         }
-
     }
 }

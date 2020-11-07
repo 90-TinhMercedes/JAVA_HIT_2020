@@ -7,7 +7,5 @@ public class RunMain {
         person_01.display();
         System.out.println();
         person_02.display();
-
-
     }
 }

@@ -10,3 +10,9 @@ INSERT INTO Products VALUES
 
 DROP TABLE Products
 SELECT * FROM Products
+
+
+
+
+INSERT INTO Products VALUES(4, N'Phắc Boiz Điện Biên')
+INSERT INTO Products VALUES(5, N'Máy Dập Điện Biên')

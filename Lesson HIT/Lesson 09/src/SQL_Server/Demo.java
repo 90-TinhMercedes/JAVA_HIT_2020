@@ -11,7 +11,12 @@ public class Demo {
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
             String sql = "SELECT * FROM Products";
+            String name = "Phắc Boiz Điện Biên";
+            String sqlInsert = "INSERT INTO Products VALUES(4, N'" + name + "')";
+
             Statement statement = connection.createStatement();
+            statement.execute(sqlInsert);
+
             ResultSet resultSet = statement.executeQuery(sql);
 
             while (resultSet.next()) {

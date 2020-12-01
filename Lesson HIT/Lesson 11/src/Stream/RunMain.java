@@ -38,6 +38,6 @@ public class RunMain {
           return false;
         };
         list.stream().filter(predicate).forEach(consumer);
-        
+
     }
 }

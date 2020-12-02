@@ -162,7 +162,7 @@ public class DataUtility {
     }
 
     //sort list Gamer by time used (descending)
-    public void SortListGamerByTimeUseddescending(ArrayList<Gamer> gamers) {
+    public void SortListGamerByTimeUsedDescending(ArrayList<Gamer> gamers) {
         for (int i = 0; i < gamers.size() - 1; i++) {
             for (int j = i + 1; j < gamers.size(); j++) {
                 if (gamers.get(i).getTimeUsed() < gamers.get(j).getTimeUsed()) {

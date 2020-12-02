@@ -6,6 +6,10 @@ public class CyberGame {
     private String addressCyber;
     private String manager;
 
+    public CyberGame() {
+
+    }
+
     public CyberGame(PersonalComputer personalComputer, Gamer gamer, String addressCyber, String manager) {
         this.personalComputer = personalComputer;
         this.gamer = gamer;

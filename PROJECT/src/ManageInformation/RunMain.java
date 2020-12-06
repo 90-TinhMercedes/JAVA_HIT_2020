@@ -206,8 +206,7 @@ public class RunMain {
         mouse = scanner.nextLine();
         System.out.print("\tHeadphone: ");
         headphone = scanner.nextLine();
-        System.out.print("\tStatus: ");
-        status = scanner.nextLine();
+        status = "Available";
         PersonalComputer personalComputer = new PersonalComputer(idPCAdd, mainBoard, cpu, ram, vga, screenSize, keyboard, mouse, headphone, status);
         dataController.WritePCToFile(pcFileName, personalComputer);
     }
@@ -282,6 +281,7 @@ public class RunMain {
                             System.out.println("4. Update ID PC use.");
                             System.out.println("5. Update Available hours.");
                             System.out.println("6. Update Time used.");
+                            System.out.println("7. Back.");
                             System.out.print("Your advanced selection: ");
                             selectionAdvanced = scanner.nextInt();
                             System.out.println("Enter information you need update: ");
@@ -342,6 +342,8 @@ public class RunMain {
                                     int timeUsedUpdate = scanner.nextInt();
                                     gamers.get(indexIDGamerUpdate).setTimeUsed(timeUsedUpdate);
                                     System.out.println("Update successful!");
+                                    break;
+                                case 7:
                                     break;
                             }
                         case 3:
@@ -419,6 +421,7 @@ public class RunMain {
                             System.out.println("7. Update Mouse.");
                             System.out.println("8. Update Headphone.");
                             System.out.println("9. Update Status.");
+                            System.out.println("10. Back.");
                             System.out.print("Your advanced selection: ");
                             selectionAdvanced = scanner.nextInt();
                             System.out.println("Enter information you need update: ");
@@ -508,7 +511,7 @@ public class RunMain {
             System.out.println("1. Sort by ID Gamer.");
             System.out.println("2. Sort by available hours.");
             System.out.println("3. Sort by time used.");
-
+            System.out.println("4. Back.");
             System.out.print("Your selection: ");
             selection = scanner.nextInt();
 
@@ -517,6 +520,7 @@ public class RunMain {
                     System.out.println("ADVANCED SORT");
                     System.out.println("1. Sort by ID Gamer (ascending).");
                     System.out.println("2. Sort by ID Gamer (descending).");
+                    System.out.println("3. Back.");
                     System.out.print("Your advanced selection: ");
                     selectionAdvanced = scanner.nextInt();
                     switch (selectionAdvanced) {
@@ -526,6 +530,8 @@ public class RunMain {
                         case 2:
                             dataUtility.SortListGamerByIDDescending(gamers);
                             break;
+                        case 3:
+                            break;
                     }
                     dataController.UpdateGamerFile(gamers, fileName);
                     break;
@@ -533,6 +539,7 @@ public class RunMain {
                     System.out.println("ADVANCED SORT");
                     System.out.println("1. Sort by available hours (ascending).");
                     System.out.println("2. Sort by available hours (descending).");
+                    System.out.println("3. Back.");
                     System.out.print("Your advanced selection: ");
                     selectionAdvanced = scanner.nextInt();
                     switch (selectionAdvanced) {
@@ -542,6 +549,8 @@ public class RunMain {
                         case 2:
                             dataUtility.SortListGamerByAvailableHoursDescending(gamers);
                             break;
+                        case 3:
+                            break;
                     }
                     dataController.UpdateGamerFile(gamers, fileName);
                     break;
@@ -549,6 +558,7 @@ public class RunMain {
                     System.out.println("ADVANCED SORT");
                     System.out.println("1. Sort by time used (ascending).");
                     System.out.println("2. Sort by time used (descending).");
+                    System.out.println("3. Back.");
                     System.out.print("Your advanced selection: ");
                     selectionAdvanced = scanner.nextInt();
                     switch (selectionAdvanced) {
@@ -558,12 +568,16 @@ public class RunMain {
                         case 2:
                             dataUtility.SortListGamerByTimeUsedDescending(gamers);
                             break;
+                        case 3:
+                            break;
                     }
                     dataController.UpdateGamerFile(gamers, fileName);
                     break;
+                case 4:
+                    break;
             }
 
-        } while (selection <= 0 || selection >= 4);
+        } while (selection <= 0 || selection >= 5);
     }
 
     public static void SortListPCGaming(DataController dataController, String fileName, DataUtility dataUtility) {
@@ -574,7 +588,7 @@ public class RunMain {
             System.out.println("1. Sort by ID PC.");
             System.out.println("2. Sort by RAM capacity.");
             System.out.println("3. Sort by Screen size.");
-
+            System.out.println("4. Back.");
             System.out.print("Your selection: ");
             selection = scanner.nextInt();
 
@@ -583,6 +597,7 @@ public class RunMain {
                     System.out.println("ADVANCED SORT");
                     System.out.println("1. Sort by ID PC (ascending).");
                     System.out.println("2. Sort by ID PC (descending).");
+                    System.out.println("3. Back.");
                     System.out.print("Your advanced selection: ");
                     selectionAdvanced = scanner.nextInt();
                     switch (selectionAdvanced) {
@@ -592,6 +607,8 @@ public class RunMain {
                         case 2:
                             dataUtility.SortListPCByIDDescending(personalComputers);
                             break;
+                        case 3:
+                            break;
                     }
                     dataController.UpdatePCFile(personalComputers, fileName);
                     break;
@@ -599,6 +616,7 @@ public class RunMain {
                     System.out.println("ADVANCED SORT");
                     System.out.println("1. Sort by RAM capacity (ascending).");
                     System.out.println("2. Sort by RAM capacity (descending).");
+                    System.out.println("3. Back.");
                     System.out.print("Your advanced selection: ");
                     selectionAdvanced = scanner.nextInt();
                     switch (selectionAdvanced) {
@@ -608,6 +626,8 @@ public class RunMain {
                         case 2:
                             dataUtility.SortListPCByRAMCapacityDescending(personalComputers);
                             break;
+                        case 3:
+                            break;
                     }
                     dataController.UpdatePCFile(personalComputers, fileName);
                     break;
@@ -615,6 +635,7 @@ public class RunMain {
                     System.out.println("ADVANCED SORT");
                     System.out.println("1. Sort by Screen size (ascending).");
                     System.out.println("2. Sort by Screen size (descending).");
+                    System.out.println("3. Back.");
                     System.out.print("Your advanced selection: ");
                     selectionAdvanced = scanner.nextInt();
                     switch (selectionAdvanced) {
@@ -624,12 +645,16 @@ public class RunMain {
                         case 2:
                             dataUtility.SortListPCByScreenSizeDescending(personalComputers);
                             break;
+                        case 3:
+                            break;
                     }
                     dataController.UpdatePCFile(personalComputers, fileName);
                     break;
+                case 4:
+                    break;
             }
 
-        } while (selection <= 0 || selection >= 4);
+        } while (selection <= 0 || selection >= 5);
     }
 
 

@@ -251,9 +251,11 @@ public class RunMain {
                                     for (int i = 0; i < personalComputers.size(); i++) {
                                         if (gamers.get(indexIDGamerUpdate).getIdPCUse() == personalComputers.get(i).getIdPC()) {
                                             indexIDOld = i;
+                                            gamers.get(indexIDGamerUpdate).setIdPCUse(idPCUse);
+                                            personalComputers.get(indexIDOld).setStatus("Available");
                                         }
                                     }
-                                    personalComputers.get(indexIDOld).setStatus("Available");
+
                                     for (int i = 0; i < personalComputers.size(); i++) {
                                         while (idPCUse == personalComputers.get(i).getIdPC()) {
                                             personalComputers.get(i).setStatus("Using");
@@ -261,7 +263,7 @@ public class RunMain {
                                         }
                                     }
                                 } else {
-                                    System.out.println("Cyber hasn't PC with this ID. Please wait for the cyber update to add PC.");
+                                    System.out.println("PC Gaming with this ID is using. Please wait for the cyber update to add PC.");
                                 }
                             } while (CheckAvailableIDPCGamerNeedUse(idPCUse, dataController));
 
@@ -315,9 +317,11 @@ public class RunMain {
                                             for (int i = 0; i < personalComputers.size(); i++) {
                                                 if (gamers.get(indexIDGamerUpdate).getIdPCUse() == personalComputers.get(i).getIdPC()) {
                                                     indexIDOld02 = i;
+                                                    gamers.get(indexIDGamerUpdate).setIdPCUse(idPCUseUpdate);
+                                                    personalComputers.get(indexIDOld02).setStatus("Available");
                                                 }
                                             }
-                                            personalComputers.get(indexIDOld02).setStatus("Available");
+
                                             for (int i = 0; i < personalComputers.size(); i++) {
                                                 while (idPCUseUpdate == personalComputers.get(i).getIdPC()) {
                                                     personalComputers.get(i).setStatus("Using");
@@ -325,11 +329,12 @@ public class RunMain {
                                                     break;
                                                 }
                                             }
+
+                                            System.out.println("Update successful!");
                                         } else {
-                                            System.out.println("Cyber hasn't PC with this ID. Please wait for the cyber update to add PC.");
+                                            System.out.println("PC Gaming with this ID is using. Please wait for the cyber update to add PC.");
                                         }
                                     } while (CheckAvailableIDPCGamerNeedUse(idPCUseUpdate, dataController));
-                                    System.out.println("Update successful!");
                                     break;
                                 case 5:
                                     System.out.print("\tAvailable hours: ");
